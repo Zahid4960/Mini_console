@@ -265,7 +265,24 @@ case $choice in
        cd .. ;; # functionality for videos
 
 
-    12);;
+    12)clear
+       echo "                                                                        Photos"
+       echo
+       echo
+       echo "                                                                     List of Photos"
+       cd photos
+       echo
+       echo
+       ls 
+       echo
+       echo
+       echo -ne "                   Type full name of your selected photo and then hit enter (Extension no need): "
+       read string 
+       cat=".jpg"
+       shotwell  $string$cat
+       cd ..;; # functionality for photos
+
+
     13);;
 	14)clear
        break;;
