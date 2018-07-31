@@ -17,7 +17,7 @@ echo "                                                         1. Date"
 echo "                                                         2. Time"
 echo "                                                         3. Calendar"
 echo "                                                         4. On this day"
-echo "                                                         5. User"
+echo "                                                         5. Current User"
 echo "                                                         6. IP Address"
 echo "                                                         7. Contacts"
 echo "                                                         8. Notebook"
@@ -92,8 +92,57 @@ case $choice in
       echo "                                           Current user name of this device is $USER"
       ;; # functionality for user
 
-      
-	 6);;
+
+	 6)clear
+       echo "                                                  IP Address"
+       echo
+       echo
+       echo "                                                      1. IPv4"
+       echo "                                                      2. Subnet mask"
+       echo "                                                      3. Broadcast Address"
+       echo "                                                      4. Details"
+       echo
+       echo
+       echo -ne "                                           Please press button of your choice "
+       read IP_choice
+
+       if [ $IP_choice -eq 1 ]
+       	then
+       		clear
+       		echo "                                                    IPv4"
+       		echo
+       		echo
+       		echo "                    Internet protocol version 4 for this device is 192.168.0.104 "
+
+       elif [ $IP_choice -eq 2 ]
+       	then
+       		clear
+       		echo "                                                  Subnet Mask"
+       		echo
+       		echo
+       		echo "                            Subnet Mask for this device is 255.255.255.0  "
+
+        elif [ $IP_choice -eq 3 ]
+       	 then
+       	 	clear
+       		echo "                                                  Broadcast Address"
+       		echo
+       		echo
+       		echo "                           Broadcast Address for this device is 192.168.0.255"
+
+       	elif [ $IP_choice -eq 4 ]
+       	 then
+       	 	clear
+       		echo "                                  Details IP Addresses for this device "
+       		echo
+       		echo
+       		ifconfig
+
+       	else
+       		clear
+       		echo "                                     You have pressed incorrect button"
+       	fi;; # functionality for IP Address
+
 	 7);;
 	 8);;
 	 9);;
