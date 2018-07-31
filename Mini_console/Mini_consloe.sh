@@ -85,7 +85,14 @@ case $choice in
        calendar;; #functionality for on this day
 
 
-	 5);;
+	 5)clear
+      echo "                                              Current user name of this device"
+      echo
+      echo
+      echo "                                           Current user name of this device is $USER"
+      ;; # functionality for user
+
+      
 	 6);;
 	 7);;
 	 8);;
