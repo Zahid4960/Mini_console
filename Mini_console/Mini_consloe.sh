@@ -103,7 +103,7 @@ case $choice in
        echo "                                                      4. Details"
        echo
        echo
-       echo -ne "                                           Please press button of your choice "
+       echo -ne "                                           Please press button of your choice: "
        read IP_choice
 
        if [ $IP_choice -eq 1 ]
@@ -145,7 +145,89 @@ case $choice in
 
 	 7);;
 	 8);;
-	 9);;
+	 9)clear
+        echo "                                                     Calculator"
+        echo
+        echo
+        echo "                                                        1. Addition"
+        echo "                                                        2. Subtraction"
+        echo "                                                        3. Multiplication"
+        echo "                                                        4. Division"
+        echo
+        echo
+        echo -ne "                                           Please press button of your choice: "
+        read Calculator_choice
+
+        if [ $Calculator_choice -eq 1 ]
+          then
+          	clear
+          	echo "                                                       Addition"
+          	echo
+          	echo
+        	echo -ne "                                              Enter 1st number:"
+        	read num1
+        	echo
+            echo -ne "                                              Enter 2nd number:"
+            read num2
+            result=$(($num1 + $num2))
+            echo
+            echo
+            echo "                                             Addition of $num1 and $num2 is :$result"
+
+        elif [ $Calculator_choice -eq 2 ]
+          then
+          	clear
+          	echo "                                                        Subtraction"
+          	echo
+          	echo
+        	echo -ne "                                              Enter 1st number:"
+        	read num1
+        	echo
+            echo -ne "                                              Enter 2nd number:"
+            read num2
+            result=$(($num1 - $num2))
+            echo
+            echo
+            echo "                                            Subtraction of $num1 and $num2 is :$result"
+
+        elif [ $Calculator_choice -eq 3 ]
+          then
+          	clear
+          	echo "                                                       Multiplication"
+          	echo
+          	echo
+        	echo -ne "                                              Enter 1st number:"
+        	read num1
+        	echo
+            echo -ne "                                              Enter 2nd number:"
+            read num2
+            result=$(($num1 * $num2))
+            echo
+            echo
+            echo "                                            Multiplication of $num1 and $num2 is :$result"
+
+        elif [ $Calculator_choice -eq 4 ]
+          then
+          	clear
+          	echo "                                                       Division"
+          	echo
+          	echo
+        	echo -ne "                                              Enter 1st number:"
+        	read num1
+        	echo
+            echo -ne "                                              Enter 2nd number:"
+            read num2
+            result=$(($num1 / $num2))
+            echo
+            echo
+            echo "                                           Division of $num1 and $num2 is :$result" 
+
+         else
+         	clear
+       		echo "                                     You have pressed incorrect button"
+       	fi;; # finctionality for calculator
+
+
 	10);;
 	11);;
     12);;
