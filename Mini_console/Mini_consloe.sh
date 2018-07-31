@@ -144,7 +144,89 @@ case $choice in
        		echo "                                     You have pressed incorrect button"
        	fi;; # functionality for IP Address
 
-	 7);;
+	 7)clear
+       echo "                                                                     Contacts"
+       echo
+       echo
+       echo "                                                                     1. Add new contact"
+       echo "                                                                     2. Search contact"
+       echo "                                                                     3. Delete contact"
+       echo "                                                                     4. View all Contacts"
+       echo
+       echo
+       echo -ne "                                                           Please press button of your choice: "
+       read contacts_choice
+
+
+       if [ $contacts_choice -eq 1 ]
+       then 
+       	clear
+       	echo "                                                               Add new contact"
+       	echo
+       	echo
+       	echo -ne "                                                              Enter name: "
+       	read name
+       	echo
+       	echo -ne "                                                            Enter mobile:"
+       	read mobile
+       	echo
+       	echo -ne "                                                           Enter Address:"
+       	read address
+        echo 
+        echo
+        clear
+        echo "                                                             New contact information"
+        echo
+        echo
+        echo "                                                                  Name: $name"
+        echo "                                                                Mobile: $mobile"
+        echo "                                                               Address: $address"
+        echo "                                                 $name-------------- $mobile----------------$address" >> contacts.log
+        echo
+        echo
+        echo "                                                           Contact saved successfully "
+
+    elif [ $contacts_choice -eq 2 ]
+     then
+        clear
+        echo "                                                               Search contact"
+       	echo
+       	echo
+       	echo -ne "                                                       Enter contact name to be Searched: "
+       	read Search
+       	clear
+       	echo "                                                                Search Results"
+       	echo
+       	echo
+       	grep -i $Search contacts.log
+    
+    elif [ $contacts_choice -eq 3 ]
+     then
+        clear
+        echo "                                                               Delete contact"
+       	echo
+       	echo
+       	echo -ne "                                                       Enter contact name to be deleted: "
+       	read delete
+       	echo
+       	echo
+        sed -i -e "/$delete/d" contacts.log
+        echo "                                                                  Deleted Successfully"
+
+    elif [ $contacts_choice -eq 4 ]
+     then
+        clear
+        echo "                                                               Show contacts"
+       	echo
+       	echo
+        cat contacts.log
+
+    else
+    	clear
+        echo "                                                    You have pressed incorrect button  "      
+    fi;; # functionality for contacts
+
+
 	 8);;
 	 9)clear
         echo "                                                     Calculator"
@@ -315,16 +397,17 @@ case $choice in
        echo "                                                          Faculty of Science & Information Technology"
        ;; # functionality for about us
 
-       
+
 	14)clear
        break;;
-     *);;
+     *)clear
+      echo "                                                           Please press correct button !!!!";;
 
 esac;
 
 echo
 echo
-echo -ne "                         Please Press 14 to exit and anything to return main menu:"
+echo -ne "                                         Please Press 14 to exit and anything to return main menu:"
 read confirm
 
 if [ $confirm -eq 14 ]
