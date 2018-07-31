@@ -379,18 +379,18 @@ case $choice in
        echo "                                                                           Sec:"B""
        echo
        echo
-       echo "                                                                      Md. Zahid Hasan"
-       echo "                                                                        151-15-4960"
+       echo "                                                                      Chitrosen Biswas"
+       echo "                                                                         161-15-7435"
        echo "                                                                           Sec:"B""
        echo
        echo
-       echo "                                                                      Md. Zahid Hasan"
-       echo "                                                                        151-15-4960"
+       echo "                                                                    Md. Mofachhal Hossain"
+       echo "                                                                        161-15-6722"
        echo "                                                                           Sec:"B""
        echo
        echo
-       echo "                                                                      Md. Zahid Hasan"
-       echo "                                                                        151-15-4960"
+       echo "                                                                        Arup Sarkar"
+       echo "                                                                        161-15-6721"
        echo "                                                                           Sec:"B""
        echo
        echo "                                                          Department of Computer Science & Engineering"
