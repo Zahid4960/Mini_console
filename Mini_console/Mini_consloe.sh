@@ -230,10 +230,10 @@ case $choice in
 
 
 	10)clear
-       echo "                                        Musics"
+       echo "                                                                          Musics"
        echo
        echo
-       echo "                                     List of Musics"
+       echo "                                                                        List of Musics"
        cd musics
        echo
        echo
@@ -244,10 +244,27 @@ case $choice in
        read string 
        cat=".mp3"
        kylin-video  $string$cat
-       cd .. ;;
+       cd .. ;; # functionality for musics
 
 
-	11);;
+	11)clear
+       echo "                                                                        Videos"
+       echo
+       echo
+       echo "                                                                     List of Videos"
+       cd videos
+       echo
+       echo
+       ls 
+       echo
+       echo
+       echo -ne "                   Type full name of your selected video and then hit enter (Extension no need): "
+       read string 
+       cat=".mp4"
+       kylin-video  $string$cat
+       cd .. ;; # functionality for videos
+
+
     12);;
     13);;
 	14)clear
