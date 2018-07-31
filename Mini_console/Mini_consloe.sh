@@ -283,7 +283,39 @@ case $choice in
        cd ..;; # functionality for photos
 
 
-    13);;
+    13)clear
+       echo "                                                                          About Us"
+       echo
+       echo
+       echo "                                                                      Md. Zahid Hasan"
+       echo "                                                                        151-15-4960"
+       echo "                                                                           Sec:"B""
+       echo
+       echo
+       echo "                                                                      Md. Asaduzzaman"
+       echo "                                                                        161-15-7179"
+       echo "                                                                           Sec:"B""
+       echo
+       echo
+       echo "                                                                      Md. Zahid Hasan"
+       echo "                                                                        151-15-4960"
+       echo "                                                                           Sec:"B""
+       echo
+       echo
+       echo "                                                                      Md. Zahid Hasan"
+       echo "                                                                        151-15-4960"
+       echo "                                                                           Sec:"B""
+       echo
+       echo
+       echo "                                                                      Md. Zahid Hasan"
+       echo "                                                                        151-15-4960"
+       echo "                                                                           Sec:"B""
+       echo
+       echo "                                                          Department of Computer Science & Engineering"
+       echo "                                                          Faculty of Science & Information Technology"
+       ;; # functionality for about us
+
+       
 	14)clear
        break;;
      *);;
