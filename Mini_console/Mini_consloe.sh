@@ -16,20 +16,21 @@ echo
 echo "                                                         1. Date"
 echo "                                                         2. Time"
 echo "                                                         3. Calendar"
-echo "                                                         4. User"
-echo "                                                         5. IP Address"
-echo "                                                         6. Contacts"
-echo "                                                         7. Notebook"
-echo "                                                         8. Calculator"
-echo "                                                         9. Music"
-echo "                                                        10. Videos"
-echo "                                                        11. About us"
-echo "                                                        12. Exit"
+echo "                                                         4. On this day"
+echo "                                                         5. User"
+echo "                                                         6. IP Address"
+echo "                                                         7. Contacts"
+echo "                                                         8. Notebook"
+echo "                                                         9. Calculator"
+echo "                                                        10. Music"
+echo "                                                        11. Videos"
+echo "                                                        12. About us"
+echo "                                                        13. Exit"
 #Closing of menu
 
 echo
 echo
-echo -ne "                                                  Please enter your choice:"
+echo -ne "                                                  Please press button of your choice:"
 read choice
 echo
 echo
@@ -49,7 +50,7 @@ case $choice in
       echo "                                                       2. 24 Hours format"
       echo
       echo
-      echo -ne "                                                 Pleae enter your choice"
+      echo -ne "                                             Please press button of your choice:"
       read time_choice
       echo
       echo
@@ -70,7 +71,13 @@ case $choice in
       fi ;; # functionality for time 
 
 
-	 3);;
+	 3)clear
+       echo "                                                         Calendar"
+       echo
+       echo
+       cal;; # functionality for calendar
+
+
 	 4);;
 	 5);;
 	 6);;
@@ -79,7 +86,8 @@ case $choice in
 	 9);;
 	10);;
 	11);;
-	12)clear
+    12);;
+	13)clear
        break;;
      *);;
 
@@ -87,12 +95,12 @@ esac;
 
 echo
 echo
-echo -ne "                              Press 12 to exit and anything to return main menu:"
+echo -ne "                         Please Press 12 to exit and anything to return main menu:"
 read confirm
 
-if [ $confirm -eq 12 ]
+if [ $confirm -eq 13 ]
 then
-	#clear
+	clear
 	break
 fi
 done
