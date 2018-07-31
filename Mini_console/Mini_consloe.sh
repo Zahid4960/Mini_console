@@ -1,5 +1,7 @@
 #!/bin/bash
 
+while :
+do
 #starting of header part
 clear
 echo "                                                              Mini Console"
@@ -29,3 +31,40 @@ echo
 echo
 echo -ne "                                                  Please enter your choice:"
 read choice
+echo
+echo
+
+case $choice in
+	 1)clear
+       echo "                                                           Date"
+       echo
+       echo 
+       date +'%d-%m-%Y' 
+       ;; # functionality for date
+
+
+	 2);;
+	 3);;
+	 4);;
+	 5);;
+	 6);;
+	 7);;
+	 8);;
+	 9);;
+	10);;
+	11);;
+	12)break;;
+     *);;
+
+esac;
+
+echo
+echo
+echo -ne "                              Press 12 to exit and anything to return main menu:"
+read confirm
+
+if [ $confirm -eq 12 ]
+then
+	break
+fi
+done
