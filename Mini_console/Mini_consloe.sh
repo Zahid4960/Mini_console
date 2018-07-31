@@ -22,10 +22,11 @@ echo "                                                         6. IP Address"
 echo "                                                         7. Contacts"
 echo "                                                         8. Notebook"
 echo "                                                         9. Calculator"
-echo "                                                        10. Music"
+echo "                                                        10. Musics"
 echo "                                                        11. Videos"
-echo "                                                        12. About us"
-echo "                                                        13. Exit"
+echo "                                                        12. Photos"
+echo "                                                        13. About us"
+echo "                                                        14. Exit"
 #Closing of menu
 
 echo
@@ -228,10 +229,28 @@ case $choice in
        	fi;; # finctionality for calculator
 
 
-	10);;
+	10)clear
+       echo "                                        Musics"
+       echo
+       echo
+       echo "                                     List of Musics"
+       cd musics
+       echo
+       echo
+       ls 
+       echo
+       echo
+       echo -ne "                   Type full name of your selected music and then hit enter (Extension no need): "
+       read string 
+       cat=".mp3"
+       kylin-video  $string$cat
+       cd .. ;;
+
+
 	11);;
     12);;
-	13)clear
+    13);;
+	14)clear
        break;;
      *);;
 
@@ -239,10 +258,10 @@ esac;
 
 echo
 echo
-echo -ne "                         Please Press 13 to exit and anything to return main menu:"
+echo -ne "                         Please Press 14 to exit and anything to return main menu:"
 read confirm
 
-if [ $confirm -eq 13 ]
+if [ $confirm -eq 14 ]
 then
 	clear
 	break
