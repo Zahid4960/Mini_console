@@ -78,7 +78,13 @@ case $choice in
        cal;; # functionality for calendar
 
 
-	 4);;
+	 4)clear
+       echo "                                                       On this day"
+       echo
+       echo
+       calendar;; #functionality for on this day
+
+
 	 5);;
 	 6);;
 	 7);;
@@ -95,7 +101,7 @@ esac;
 
 echo
 echo
-echo -ne "                         Please Press 12 to exit and anything to return main menu:"
+echo -ne "                         Please Press 13 to exit and anything to return main menu:"
 read confirm
 
 if [ $confirm -eq 13 ]
