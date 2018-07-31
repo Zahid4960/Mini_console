@@ -43,7 +43,33 @@ case $choice in
        ;; # functionality for date
 
 
-	 2);;
+	 2)clear
+      echo "                                                            Time"
+      echo "                                                       1. 12 Hours format"
+      echo "                                                       2. 24 Hours format"
+      echo
+      echo
+      echo -ne "                                                 Pleae enter your choice"
+      read time_choice
+      echo
+      echo
+      if [ $time_choice -eq 1 ]
+      	then
+      		clear
+      		echo "                                                Time in 12 hours format"
+      		date +'%r'
+
+      elif [ $time_choice -eq 2 ]
+      	then 
+      		clear
+      		echo "                                                Time in 24 hours format"
+      	    date +'%T'
+      else
+      	clear
+      	echo "                                     You have pressed incorrect button"
+      fi ;; # functionality for time 
+
+
 	 3);;
 	 4);;
 	 5);;
@@ -53,7 +79,8 @@ case $choice in
 	 9);;
 	10);;
 	11);;
-	12)break;;
+	12)clear
+       break;;
      *);;
 
 esac;
@@ -65,6 +92,7 @@ read confirm
 
 if [ $confirm -eq 12 ]
 then
+	#clear
 	break
 fi
 done
